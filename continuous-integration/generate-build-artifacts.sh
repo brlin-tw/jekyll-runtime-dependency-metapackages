@@ -92,6 +92,20 @@ if ! \
 fi
 
 printf \
+    'Info: Patching the version string of the Debian/Ubuntu runtime dependency package...\n'
+sed_opts=(
+    --in-place
+    --regexp-extended
+    --expression="s@^Version: 0.0.1@Version: ${project_version}@g"
+)
+if ! sed "${sed_opts[@]}" debian/control; then
+    printf \
+        'Error: Unable to patch the version string of the Debian/Ubuntu runtime dependency package.' \
+        1>&2
+    exit 2
+fi
+
+printf \
     'Info: Building the Debian/Ubuntu runtime dependency package...\n'
 if ! equivs-build debian/control; then
     printf \
