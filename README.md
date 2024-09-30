@@ -14,22 +14,22 @@ Provides runtime dependency metapackages for upstream Jekyll installation needs.
 
 1. Run the following command _as root_ in a text terminal to ensure your local cache of the package repositories is fresh:
 
-```bash
-apt update
-```
+    ```bash
+    apt update
+    ```
 
 1. Run the following command _as root_ in a text terminal to install the metapackage using your package manager:
 
-```bash
-apt install /path/to/jekyll-runtime-deps*.deb
-```
+    ```bash
+    apt install /path/to/jekyll-runtime-deps*.deb
+    ```
 
 1. When you no longer need the runtime dependencies you can run the following commands _as root_ in a text terminal to remove the runtime dependency packages:
 
-```bash
-apt remove jekyll-runtime-deps
-apt autoremove
-```
+    ```bash
+    apt remove jekyll-runtime-deps
+    apt autoremove
+    ```
 
 ## References
 
