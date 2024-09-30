@@ -38,6 +38,7 @@ generate-build-artifacts:
   artifacts:
     paths:
       - ${CI_PROJECT_NAME}-*.tar*
+      - jekyll-runtime-deps_*_all.deb
   script:
     - ./continuous-integration/generate-build-artifacts.install-system-deps.sh
     - ./continuous-integration/generate-build-artifacts.sh
