@@ -92,4 +92,13 @@ if ! \
 fi
 
 printf \
+    'Info: Building the Debian/Ubuntu runtime dependency package...\n'
+if ! equivs-build debian/control; then
+    printf \
+        'Error: Unable to build the Debian/Ubuntu runtime dependency package.\n' \
+        1>&2
+    exit 2
+fi
+
+printf \
     'Info: Operation completed without errors.\n'

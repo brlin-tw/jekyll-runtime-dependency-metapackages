@@ -88,3 +88,8 @@
 
 # Don't track continuous integration virtual environments
 /continuous-integration/venv/
+
+# Don't track built Debian packages and related files
+*.deb
+*.buildinfo
+*.changes

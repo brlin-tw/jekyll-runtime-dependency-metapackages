@@ -71,4 +71,5 @@ jobs:
           name: ${{ env.project_id }} ${{ env.release_version }}
           files: |
             ${{ env.release_id }}.tar*
+            jekyll-runtime-deps_*_all.deb
           body_path: .detailed_changes

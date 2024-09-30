@@ -178,6 +178,8 @@ runtime_dependency_pkgs=(
     gzip
     #xz
 
+    equivs
+
     git
 
     python3-minimal

@@ -24,7 +24,9 @@ release_version="${CI_COMMIT_TAG#v}"
 script_dir="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)"
 project_dir="${script_dir%/*}"
 
-for file in "${project_dir}/${CI_PROJECT_NAME}-"*; do
+for file in \
+    "${project_dir}/${CI_PROJECT_NAME}-"* \
+    jekyll-runtime-deps_*_all.deb; do
     if test "${file}" = "${project_dir}/${CI_PROJECT_NAME}-*"; then
         # No release packages are found, avoid missing file error
         break
