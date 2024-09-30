@@ -44,7 +44,9 @@ release_cli_create_opts=(
 )
 
 shopt -s nullglob
-for file in "${project_dir}/${CI_PROJECT_NAME}-"*; do
+for file in \
+    "${project_dir}/${CI_PROJECT_NAME}-"* \
+    "${project_dir}/jekyll-runtime-deps_"*_all.deb; do
     filename="${file##*/}"
     package_registry_url="${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${release_version}/${filename}"
 
